@@ -1,0 +1,48 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scripts/AnimatedSprite.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/dad/dadwalk1.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/dad/dadwalk2.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/dad/dadsit.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/dad/dadcry1.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/dad/dadcry2.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/dad/dadhappy.png" type="Texture" id=7]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "sit",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "cry",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "happy",
+"speed": 5.0
+} ]
+_sections_unfolded = [ "Resource" ]
+
+[node name="Node2D" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
+
+position = Vector2( 563.926, 370.077 )
+scale = Vector2( 10, 10 )
+frames = SubResource( 1 )
+animation = "walk"
+_sections_unfolded = [ "Transform" ]
+
+
