@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://scripts/Dad.gd" type="Script" id=1]
+[ext_resource path="res://scripts/Walking.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/dad/dadwalk1.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/dad/dadwalk2.png" type="Texture" id=3]
 
@@ -71,7 +71,6 @@ position = Vector2( -0.595947, -0.545471 )
 scale = Vector2( 3.75714, 1.99562 )
 frames = SubResource( 3 )
 animation = "walk"
-frame = 1
 playing = true
 
 
