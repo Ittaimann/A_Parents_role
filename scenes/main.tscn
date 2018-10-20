@@ -15,6 +15,6 @@ margin_top = -7.47171
 margin_right = -8.729
 margin_bottom = -7.47171
 
-[node name="Dad" parent="." index="2" instance=ExtResource( 3 )]
+[node name="DadMoving" parent="." index="2" instance=ExtResource( 3 )]
 
 

@@ -39,6 +39,7 @@ shape = SubResource( 1 )
 position = Vector2( -0.288162, 0.454815 )
 frames = SubResource( 2 )
 animation = "walk"
+frame = 1
 playing = true
 _sections_unfolded = [ "Transform" ]
 
