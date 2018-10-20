@@ -18,7 +18,7 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 2.82897, 4.88283 )
 
-[node name="Dad" type="KinematicBody2D" index="0"]
+[node name="Dad" type="KinematicBody2D"]
 
 position = Vector2( 688.902, 575.088 )
 scale = Vector2( 10, 10 )
