@@ -21,3 +21,8 @@ func _process(delta):
 			print(my_node.get_text())
 		days+=1
 # print something from the dictionnary for testing.
+
+
+func _on_Daughter_talked():
+	my_node.set_text(dict[str(days)][1])
+
