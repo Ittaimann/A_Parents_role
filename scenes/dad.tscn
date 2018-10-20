@@ -27,9 +27,7 @@ collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
+_sections_unfolded = [ "Collision", "Pickable", "collision" ]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 
@@ -37,6 +35,7 @@ position = Vector2( -0.595947, -0.545471 )
 scale = Vector2( 3.75714, 1.99562 )
 frames = SubResource( 1 )
 animation = "walk"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
