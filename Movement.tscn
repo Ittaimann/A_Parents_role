@@ -1,0 +1,77 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scripts/Dad.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/dad/dadwalk1.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/dad/dadwalk2.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 13.3008, 30.4953 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 8.98967 )
+
+[sub_resource type="SpriteFrames" id=3]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+} ]
+
+[node name="Node" type="Node" index="0"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="0"]
+
+position = Vector2( 477.5, 412.265 )
+scale = Vector2( 2.95312, 0.351086 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" index="0"]
+
+position = Vector2( 0.00888062, 0.431152 )
+scale = Vector2( 2.36701, 1.03186 )
+shape = SubResource( 1 )
+
+[node name="Dad" type="KinematicBody2D" parent="." index="1"]
+
+position = Vector2( 482.6, 349.188 )
+scale = Vector2( 0.40312, 0.681624 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dad" index="0"]
+
+position = Vector2( -0.347778, 0.273326 )
+scale = Vector2( 3.07692, 3.50437 )
+shape = SubResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Dad" index="1"]
+
+position = Vector2( -0.595947, -0.545471 )
+scale = Vector2( 3.75714, 1.99562 )
+frames = SubResource( 3 )
+animation = "walk"
+frame = 1
+playing = true
+
+
