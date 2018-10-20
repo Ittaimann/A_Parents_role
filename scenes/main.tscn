@@ -4,7 +4,7 @@
 [ext_resource path="res://scenes/9patchTets.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/dad.tscn" type="PackedScene" id=3]
 
-[node name="main" type="Node" index="0"]
+[node name="main" type="Node"]
 
 [node name="housebackground" parent="." index="0" instance=ExtResource( 1 )]
 
