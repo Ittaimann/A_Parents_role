@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 13.3008, 63.3091 )
+
+[node name="Floor and walls" type="StaticBody2D"]
+
+position = Vector2( 633.645, 724.438 )
+scale = Vector2( 20.5535, 0.188774 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="." index="0"]
+
+position = Vector2( 31.561, -1980.85 )
+scale = Vector2( 0.141541, 31.5332 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="." index="1"]
+
+position = Vector2( -30.6663, -1980.85 )
+scale = Vector2( 0.129052, 31.5332 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." index="2"]
+
+position = Vector2( 0.00888062, 0.431152 )
+scale = Vector2( 2.36701, 1.03186 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+

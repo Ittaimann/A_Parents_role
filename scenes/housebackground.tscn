@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprites/housebackground.png" type="Texture" id=1]
+[ext_resource path="res://scenes/Floor and walls.tscn" type="PackedScene" id=2]
+
+[node name="housebackground" type="Sprite"]
+
+show_behind_parent = true
+position = Vector2( 638.97, 396.401 )
+scale = Vector2( 9.9646, 8.2423 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Region", "Visibility" ]
+
+[node name="Floor and walls" parent="." index="0" instance=ExtResource( 2 )]
+
+position = Vector2( 0, 45 )
+scale = Vector2( 2, 0.1 )
+
+

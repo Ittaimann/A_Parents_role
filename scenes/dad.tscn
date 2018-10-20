@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scripts/Walking.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/dad/dadwalk1.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/dad/dadwalk2.png" type="Texture" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 8.98967 )
+
+[node name="Dad" type="KinematicBody2D"]
+
+position = Vector2( 688.902, 575.088 )
+scale = Vector2( 2.99085, 4.20473 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
+
+position = Vector2( -0.595947, -0.545471 )
+scale = Vector2( 3.75714, 1.99562 )
+frames = SubResource( 1 )
+animation = "walk"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+position = Vector2( -0.347778, 0.273326 )
+scale = Vector2( 3.07692, 3.50437 )
+shape = SubResource( 2 )
+
+

@@ -19,7 +19,7 @@ tracks/0/keys = {
 "values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
 }
 
-[node name="ColorRect" type="ColorRect" index="0"]
+[node name="ColorRect" type="ColorRect"]
 
 anchor_left = 0.0
 anchor_top = 0.0
