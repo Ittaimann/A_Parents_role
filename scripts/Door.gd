@@ -23,7 +23,6 @@ func _physics_process(delta):
 
 func _on_Door_choseDoor():
 	global.daughterTime = max( global.daughterTime - 1, 0 )
-	global.money += 500
 	paused = true
 
 
