@@ -1,7 +1,7 @@
 extends Node
 
 var dict = {} 
-var days = 1 
+var days = global.days
 onready var my_node = get_node("NinePatchRect/text")
 # class member variables go here, for example:
 # var a = 2
