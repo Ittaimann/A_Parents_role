@@ -42,7 +42,7 @@ use_filter = false
 font_data = ExtResource( 2 )
 _sections_unfolded = [ "Settings" ]
 
-[node name="Fadeout" type="ColorRect"]
+[node name="Fadeout" type="ColorRect" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -97,13 +97,22 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
 
-[node name="fadeTimer" type="Timer" parent="." index="2"]
+[node name="DaughterTimer" type="Timer" parent="." index="2"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[node name="doorTimer" type="Timer" parent="." index="3"]
 
 process_mode = 1
 wait_time = 1.0
 one_shot = true
 autostart = false
 
-[connection signal="timeout" from="fadeTimer" to="." method="_on_fadeTimer_timeout"]
+[connection signal="timeout" from="DaughterTimer" to="." method="_on_DaughterTimer_timeout"]
+
+[connection signal="timeout" from="doorTimer" to="." method="_on_fadeTimer_timeout"]
 
 
