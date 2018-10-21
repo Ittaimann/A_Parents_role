@@ -127,7 +127,7 @@ valign = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
+_sections_unfolded = [ "Rect", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
 
 [node name="DaughterTimer" type="Timer" parent="." index="2"]
 

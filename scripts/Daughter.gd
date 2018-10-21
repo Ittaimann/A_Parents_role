@@ -8,12 +8,16 @@ func _ready():
 	
 
 func _physics_process(delta):
+	if global.daughterTime < 2:
+		self.hide()
+	
 	var bodies = get_overlapping_bodies()
 	for body in bodies:
 		if body.name == "Dad":
 			print("touching")
 			if not paused and Input.is_action_just_pressed("ui_down"):
 				emit_signal("talked")
+	
 
 
 
