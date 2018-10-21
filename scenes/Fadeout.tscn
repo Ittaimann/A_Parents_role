@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/Fadeout.gd" type="Script" id=1]
 [ext_resource path="res://VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=2]
@@ -35,25 +35,6 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id=4]
-
-resource_name = "endFade"
-length = 1.0
-loop = false
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
-}
-
-[sub_resource type="Animation" id=2]
 
 resource_name = "startFade"
 length = 5.0
@@ -106,7 +87,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-color = Color( 0, 0, 0, 1 )
+color = Color( 0, 0, 0, 0 )
 script = ExtResource( 1 )
 _sections_unfolded = [ "Rect" ]
 
@@ -118,8 +99,7 @@ playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
 anims/Fade = SubResource( 1 )
-anims/endFade = SubResource( 4 )
-anims/startFade = SubResource( 2 )
+anims/startFade = SubResource( 4 )
 blend_times = [  ]
 _sections_unfolded = [ "Playback Options" ]
 
@@ -163,17 +143,8 @@ wait_time = 1.0
 one_shot = true
 autostart = false
 
-[node name="GameOver" type="Timer" parent="." index="4"]
-
-process_mode = 1
-wait_time = 1.5
-one_shot = false
-autostart = false
-
 [connection signal="timeout" from="DaughterTimer" to="." method="_on_DaughterTimer_timeout"]
 
 [connection signal="timeout" from="doorTimer" to="." method="_on_fadeTimer_timeout"]
-
-[connection signal="timeout" from="GameOver" to="." method="_on_GameOver_timeout"]
 
 

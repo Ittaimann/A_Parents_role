@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 13.4745, 13.2922 )
+extents = Vector2( 7.53291, 12.2063 )
 
 [node name="Daughter" type="Area2D"]
 
@@ -31,5 +31,15 @@ _sections_unfolded = [ "Transform" ]
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
 shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="daughterPauseTimer" type="Timer" parent="." index="2"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[connection signal="timeout" from="daughterPauseTimer" to="." method="_on_daughterPauseTimer_timeout"]
 
 
