@@ -8,6 +8,9 @@ func _ready():
 	
 
 func _physics_process(delta):
+	if global.days == 7: 
+		paused = true
+		
 	var bodies = get_overlapping_bodies()
 	for body in bodies:
 		if body.name == "Dad":
