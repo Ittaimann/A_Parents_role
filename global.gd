@@ -2,6 +2,7 @@ extends Node
 
 var days=1
 var daughterTime=15
+var money = 500
 
 func _process(delta):
 	pass

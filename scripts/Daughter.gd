@@ -27,7 +27,6 @@ func _on_text_box_sceneVars(animation, audio):
 
 
 func _on_Daughter_talked():
-	
 	if global.daughterTime > 1 and not global.days == 7:
 		global.daughterTime = min(global.daughterTime + 1, 20)
 	paused = true
