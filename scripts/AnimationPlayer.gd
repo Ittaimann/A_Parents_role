@@ -14,3 +14,4 @@ func _process(delta):
 
 func _on_Door_choseDoor():
 	play("Fade")
+	
