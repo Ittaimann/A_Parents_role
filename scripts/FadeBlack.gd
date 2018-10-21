@@ -18,9 +18,9 @@ func _on_Button_pressed():
 
 func _on_fadeTimer_timeout():
 	#emit_signal("veryFirstDay")
-	get_tree().change_scene_to(home)
 	$fadeTimer.set_wait_time(1)
 	$fadeTimer.stop()
+	get_tree().change_scene_to(home)
 
 
 
