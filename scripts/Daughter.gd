@@ -33,7 +33,7 @@ func _on_text_box_sceneVars(anims):
 		$AnimatedSprite.hide()
 	else:
 		$AnimatedSprite.show()
-		$AnimatedSprite.play(anims)
+		$AnimatedSprite.play(animation)
 
 
 func _on_Daughter_talked():
