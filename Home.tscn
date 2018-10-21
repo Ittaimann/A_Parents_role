@@ -80,16 +80,11 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Dad" parent="." index="6" instance=ExtResource( 5 )]
 
-position = Vector2( 693.219, 594.514 )
+position = Vector2( 691.061, 670.06 )
 
 [node name="Fadeout" parent="." index="7" instance=ExtResource( 6 )]
 
-
-
-
-
-
-[connection signal="sceneVars" from="text_box" to="Daughter" method="_on_text_box_sceneVars"]
+visible = false
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="8"]
 
@@ -101,15 +96,18 @@ mix_target = 0
 bus = "Master"
 script = ExtResource( 8 )
 
-[connection signal="choseDoor" from="Door" to="Door" method="_on_Door_choseDoor"]
-
 [connection signal="choseDoor" from="Door" to="Fadeout" method="_on_Door_choseDoor"]
+
+[connection signal="choseDoor" from="Door" to="Door" method="_on_Door_choseDoor"]
 
 [connection signal="talked" from="Daughter" to="Fadeout" method="_on_Daughter_talked"]
 
 [connection signal="talked" from="Daughter" to="text_box" method="_on_Daughter_talked"]
 
+[connection signal="sceneVars" from="text_box" to="Daughter" method="_on_text_box_sceneVars"]
 
 [connection signal="nextDay" from="Fadeout" to="text_box" method="_on_Fadeout_nextDay"]
+
+[connection signal="nextDay" from="Fadeout" to="Dad" method="_on_Fadeout_nextDay"]
 
 

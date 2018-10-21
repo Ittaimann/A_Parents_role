@@ -6,7 +6,7 @@ signal nextDay;
 func _ready():
 	$AnimationPlayer.play("startFade")
 	$doorTimer.set_wait_time(1)
-	Dad = get_tree().get_root().get_node("Dad")
+#Dad = get_tree().get_root().get_node("Dad")
 	
 func _process(delta):
 	pass
@@ -25,6 +25,7 @@ func _on_Door_choseDoor():
 
 func _on_fadeTimer_timeout():
 	global.days+=1
+	emit_signal("nextDay")
 	print(global.days)
 	$doorTimer.set_wait_time(1)
 	$doorTimer.stop()

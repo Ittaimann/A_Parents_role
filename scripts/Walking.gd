@@ -35,4 +35,5 @@ func _physics_process(delta):
 
 
 func _on_Fadeout_nextDay():
+	print("LOL")
 	transform = initialPos
