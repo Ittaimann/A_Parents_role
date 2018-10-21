@@ -4,11 +4,11 @@ var days=1
 var daughterTime=0
 
 func _process(delta):
-	if (days > 10):
-		if(daughterTime<5):
-			pass
+	if (days >= 19):
+		if(daughterTime>15):
+			print("good")
 		#	print("bad end")
 		else:
-			pass
+			print("bad")
 		#	print ("good end")
  

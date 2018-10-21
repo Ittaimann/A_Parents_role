@@ -1,71 +1,71 @@
 [gd_scene load_steps=21 format=2]
 
-[ext_resource path="res://Sprites/girlsprites_spliced/girl_sick_cough_1.png" type="Texture" id=1]
-[ext_resource path="res://Sprites/girlsprites_spliced/girl_sick_cough_2.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/girlsprites_spliced/girl_sick_play.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/girlsprites_spliced/girl_healthy_cough_1.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/girlsprites_spliced/girl_healthy_cough_2.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/girlsprites_spliced/girl_healthy_headache_1.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/girlsprites_spliced/girl_healthy_headache_2.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/girlsprites_spliced/girl_healthy_walk_1.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/girlsprites_spliced/girl_healthy_walk_2.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/girlsprites_spliced/girl_verysick_walk_1.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/girlsprites_spliced/girl_verysick_walk_2.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/girlsprites_spliced/girl_sick_walk_1.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/girlsprites_spliced/girl_sick_walk_2.png" type="Texture" id=13]
-[ext_resource path="res://Sprites/girlsprites_spliced/girl_verysick_read.png" type="Texture" id=14]
-[ext_resource path="res://Sprites/girlsprites_spliced/girl_healthy_read.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/girlsprites_spliced/girl_healthy_walk_1.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/girlsprites_spliced/girl_healthy_walk_2.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/girlsprites_spliced/girl_sick_read.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/girlsprites_spliced/girl_verysick_read.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/girlsprites_spliced/girl_healthy_play_1.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/girlsprites_spliced/girl_healthy_play_2.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/girlsprites_spliced/girl_healthy_headache_1.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/girlsprites_spliced/girl_healthy_headache_2.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/girlsprites_spliced/girl_sick_walk_1.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/girlsprites_spliced/girl_sick_walk_2.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/girlsprites_spliced/girl_healthy_read.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/girlsprites_spliced/girl_sick_cough_1.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/girlsprites_spliced/girl_sick_cough_2.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/girlsprites_spliced/girl_healthy_cough_1.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/girlsprites_spliced/girl_healthy_cough_2.png" type="Texture" id=15]
 [ext_resource path="res://Sprites/girlsprites_spliced/girl_verysick_play.png" type="Texture" id=16]
-[ext_resource path="res://Sprites/girlsprites_spliced/girl_sick_read.png" type="Texture" id=17]
-[ext_resource path="res://Sprites/girlsprites_spliced/girl_healthy_play_1.png" type="Texture" id=18]
-[ext_resource path="res://Sprites/girlsprites_spliced/girl_healthy_play_2.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/girlsprites_spliced/girl_verysick_walk_1.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/girlsprites_spliced/girl_verysick_walk_2.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/arrow_doctor_hideandseek_spliced/doctor.png" type="Texture" id=19]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
 "frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
 "loop": true,
-"name": "sick Cough",
+"name": "healthy walk",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
-"name": "sickPlay",
+"name": "sick read",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "healthy Cough",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
-"loop": true,
-"name": "healthy Headache",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 8 ), ExtResource( 9 ) ],
-"loop": true,
-"name": "healthy walk",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 10 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "very sick walk",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 12 ), ExtResource( 13 ) ],
-"loop": true,
-"name": "sick walk",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 14 ) ],
+"frames": [ ExtResource( 4 ) ],
 "loop": true,
 "name": "very sick read",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 15 ) ],
+"frames": [ ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "healthy Play",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "healthy Headache",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "sick walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ) ],
 "loop": true,
 "name": "healthy read",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "sick Cough",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "healthy Cough",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 16 ) ],
@@ -73,14 +73,14 @@ animations = [ {
 "name": "very sick play",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 17 ) ],
+"frames": [ ExtResource( 17 ), ExtResource( 18 ) ],
 "loop": true,
-"name": "sick read",
+"name": "very sick walk",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 18 ), ExtResource( 19 ) ],
+"frames": [ ExtResource( 19 ) ],
 "loop": true,
-"name": "healthy Play",
+"name": "doctor",
 "speed": 5.0
 } ]
 

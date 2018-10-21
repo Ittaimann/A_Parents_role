@@ -20,7 +20,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="GoodEnding" type="Node" index="0"]
+[node name="GoodEnding" type="Node"]
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
@@ -42,6 +42,7 @@ position = Vector2( 0.872746, 23.9103 )
 scale = Vector2( 1, 1 )
 frames = SubResource( 1 )
 animation = "default"
+frame = 1
 playing = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Sprite2" index="1"]
