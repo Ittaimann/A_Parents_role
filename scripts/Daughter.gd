@@ -30,7 +30,9 @@ func _on_text_box_sceneVars(anims):
 
 
 func _on_Daughter_talked():
-	daughterTime+=1
+	
+	if global.daughterTime > 1:
+		global.daughterTime = min(global.daughterTime + 1, 20)
 	paused = true
 
 

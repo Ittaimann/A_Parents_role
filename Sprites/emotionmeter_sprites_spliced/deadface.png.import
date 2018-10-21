@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/emotionmeter_happy.png-b04967984358a78d186f53e0ba456f6c.stex"
+path="res://.import/deadface.png-0518f831c0e25fad403f4d60ab6152c8.stex"
 
 [deps]
 
-source_file="res://Sprites/emotionmeter_sprites_spliced/emotionmeter_happy.png"
-dest_files=[ "res://.import/emotionmeter_happy.png-b04967984358a78d186f53e0ba456f6c.stex" ]
+source_file="res://Sprites/emotionmeter_sprites_spliced/deadface.png"
+dest_files=[ "res://.import/deadface.png-0518f831c0e25fad403f4d60ab6152c8.stex" ]
 
 [params]
 
