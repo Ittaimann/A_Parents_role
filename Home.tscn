@@ -116,9 +116,9 @@ script = ExtResource( 10 )
 
 [connection signal="choseDoor" from="Door" to="Door" method="_on_Door_choseDoor"]
 
-[connection signal="sceneVars" from="text_box" to="housebackground" method="_on_text_box_sceneVars"]
-
 [connection signal="sceneVars" from="text_box" to="AudioStreamPlayer" method="_on_text_box_sceneVars"]
+
+[connection signal="sceneVars" from="text_box" to="housebackground" method="_on_text_box_sceneVars"]
 
 [connection signal="sceneVars" from="text_box" to="Daughter" method="_on_text_box_sceneVars"]
 
@@ -128,8 +128,8 @@ script = ExtResource( 10 )
 
 [connection signal="nextDay" from="Fadeout" to="text_box" method="_on_Fadeout_nextDay"]
 
-[connection signal="nextDay" from="Fadeout" to="Door" method="_on_Fadeout_nextDay"]
-
 [connection signal="nextDay" from="Fadeout" to="Dad" method="_on_Fadeout_nextDay"]
+
+[connection signal="nextDay" from="Fadeout" to="Door" method="_on_Fadeout_nextDay"]
 
 
