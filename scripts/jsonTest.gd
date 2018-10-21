@@ -12,6 +12,8 @@ func _ready():
 	var text = JSON.parse(file.get_as_text())
 	file.close()
 	dict = (text.result)
+	
+	my_node.set_text(dict[str(days)][0])
 
 func _process(delta):
 	pass
@@ -25,9 +27,10 @@ func _process(delta):
 
 func _on_Daughter_talked():
 	my_node.set_text(dict[str(days)][1])
-
+	
 
 
 func _on_Fadeout_nextDay():
-	print("its time") # replace with function body
+	days+=1
+	my_node.set_text(dict[str(days)][0])
 	pass

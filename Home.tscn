@@ -87,6 +87,10 @@ position = Vector2( 693.219, 594.514 )
 
 [connection signal="talked" from="Daughter" to="text_box" method="_on_Daughter_talked"]
 
+[connection signal="talked" from="Daughter" to="Fadeout" method="_on_Daughter_talked"]
+
 [connection signal="nextDay" from="Fadeout" to="text_box" method="_on_Fadeout_nextDay"]
+
+[connection signal="nextDay" from="Fadeout" to="Dad" method="_on_Fadeout_nextDay"]
 
 
