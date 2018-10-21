@@ -5,6 +5,7 @@ signal nextDay;
 
 func _ready():
 	$AnimationPlayer.play("startFade")
+	$"day Text".text = "day 0"
 	$doorTimer.set_wait_time(1)
 #Dad = get_tree().get_root().get_node("Dad")
 	

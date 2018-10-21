@@ -35,6 +35,7 @@ _sections_unfolded = [ "Collision", "Pickable", "Transform", "collision" ]
 position = Vector2( -0.595947, -0.545471 )
 frames = SubResource( 1 )
 animation = "walk"
+frame = 1
 playing = true
 _sections_unfolded = [ "Transform" ]
 
