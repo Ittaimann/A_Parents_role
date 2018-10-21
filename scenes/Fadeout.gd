@@ -1,12 +1,9 @@
 extends ColorRect
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
 signal playing;
 signal nextDay;
 func _ready():
-	$fadeTimer.set_wait_time(1)
+	$doorTimer.set_wait_time(1)
 	
 func _process(delta):
 	pass
@@ -14,15 +11,28 @@ func _process(delta):
 
 
 func _on_Door_choseDoor():
-	print("NANI")
 	$AnimationPlayer.play("Fade")
-	$fadeTimer.wait_time = $AnimationPlayer.get_current_animation_length()
-	$fadeTimer.start()
+	$"day Text".text = "The next day..."
+	$doorTimer.wait_time = $AnimationPlayer.get_current_animation_length()/3
+	$doorTimer.start()
+	
+
 	
 
 
 func _on_fadeTimer_timeout():
 	emit_signal("nextDay")
-	$fadeTimer.set_wait_time(1)
-	print($fadeTimer.time_left)
-	$fadeTimer.stop()
+	$doorTimer.set_wait_time(1)
+	$doorTimer.stop()
+
+func _on_Daughter_talked():
+	$DaughterTimer.wait_time = 1.5
+	$DaughterTimer.start()
+
+
+func _on_DaughterTimer_timeout():
+	$DaughterTimer.stop()
+	$AnimationPlayer.play("Fade")
+	$"day Text".text = "The next day..."
+	$doorTimer.wait_time = $AnimationPlayer.get_current_animation_length()/3
+	$doorTimer.start()

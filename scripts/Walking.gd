@@ -9,6 +9,10 @@ const JUMPHEIGHT = -50
 
 const UP = Vector2(0,-1)
 var motion = Vector2()
+var initialPos = Vector2()
+
+func _ready():
+	initialPos = transform
 
 func _physics_process(delta):
 	motion.y += GRAVITY
@@ -28,3 +32,7 @@ func _physics_process(delta):
 	motion = move_and_slide(motion, UP)
 		
 	pass
+
+
+func _on_Fadeout_nextDay():
+	transform = initialPos
