@@ -139,11 +139,13 @@ autostart = false
 
 [connection signal="choseDoor" from="Door" to="Door" method="_on_Door_choseDoor"]
 
+[connection signal="choseDoor" from="Door" to="Daughter" method="_on_Door_choseDoor"]
+
 [connection signal="choseDoor" from="Door" to="Dad" method="_on_Door_choseDoor"]
 
-[connection signal="talked" from="Daughter" to="text_box" method="_on_Daughter_talked"]
-
 [connection signal="talked" from="Daughter" to="Fadeout" method="_on_Daughter_talked"]
+
+[connection signal="talked" from="Daughter" to="text_box" method="_on_Daughter_talked"]
 
 [connection signal="talked" from="Daughter" to="Daughter" method="_on_Daughter_talked"]
 
