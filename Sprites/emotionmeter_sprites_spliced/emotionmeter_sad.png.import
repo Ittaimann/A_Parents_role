@@ -1,0 +1,37 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/emotionmeter_sad.png-66994899bb0003ced17451b914b4fba0.stex"
+
+[deps]
+
+source_file="res://Sprites/emotionmeter_sprites_spliced/emotionmeter_sad.png"
+dest_files=[ "res://.import/emotionmeter_sad.png-66994899bb0003ced17451b914b4fba0.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+<<<<<<< HEAD
+flags/filter=true
+=======
+flags/filter=false
+>>>>>>> d36bf02f5d6218336ecb3e7caa81490cae31e7a0
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+<<<<<<< HEAD
+detect_3d=true
+=======
+detect_3d=false
+>>>>>>> d36bf02f5d6218336ecb3e7caa81490cae31e7a0
+svg/scale=1.0

@@ -12,15 +12,16 @@ animations = [ {
 "name": "walk",
 "speed": 5.0
 } ]
+_sections_unfolded = [ "Resource" ]
 
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 2.82897, 4.88283 )
+extents = Vector2( 2.57059, 6.36398 )
 
 [node name="Dad" type="KinematicBody2D"]
 
-position = Vector2( 688.902, 575.088 )
+position = Vector2( 763.103, 585.688 )
 scale = Vector2( 10, 10 )
 input_pickable = false
 collision_layer = 1
@@ -34,14 +35,13 @@ _sections_unfolded = [ "Collision", "Pickable", "Transform", "collision" ]
 position = Vector2( -0.595947, -0.545471 )
 frames = SubResource( 1 )
 animation = "walk"
-frame = 1
 playing = true
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-position = Vector2( -0.347778, 0.273326 )
-scale = Vector2( 3.07692, 3.50437 )
+position = Vector2( -0.612778, 0.0332794 )
+scale = Vector2( 3.07692, 2.73433 )
 shape = SubResource( 2 )
 
 
