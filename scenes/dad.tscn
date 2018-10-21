@@ -17,7 +17,7 @@ _sections_unfolded = [ "Resource" ]
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 2.57059, 6.36398 )
+extents = Vector2( 1.69108, 6.36398 )
 
 [node name="Dad" type="KinematicBody2D"]
 
@@ -41,7 +41,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-position = Vector2( -0.612778, 0.0332794 )
+position = Vector2( -0.652255, -0.63488 )
 scale = Vector2( 3.07692, 2.73433 )
 shape = SubResource( 2 )
 

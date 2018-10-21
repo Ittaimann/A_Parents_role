@@ -1,31 +1,6 @@
 [gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Sprites/housebackground.png" type="Texture" id=1]
-<<<<<<< HEAD
-[ext_resource path="res://BackgroundChange.gd" type="Script" id=2]
-[ext_resource path="res://Sprites/inbedsickbackground.png" type="Texture" id=3]
-[ext_resource path="res://prefabs/Door.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/9patchTets.tscn" type="PackedScene" id=5]
-[ext_resource path="res://prefabs/Daughter.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scenes/dad.tscn" type="PackedScene" id=7]
-[ext_resource path="res://scenes/Fadeout.tscn" type="PackedScene" id=8]
-[ext_resource path="res://audio/House (Beta).ogg" type="AudioStream" id=9]
-[ext_resource path="res://AudioStreamPlayer.gd" type="Script" id=10]
-
-[sub_resource type="SpriteFrames" id=2]
-
-animations = [ {
-"frames": [ ExtResource( 1 ) ],
-"loop": true,
-"name": "healthy",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ) ],
-"loop": true,
-"name": "sick",
-"speed": 5.0
-} ]
-=======
 [ext_resource path="res://prefabs/Door.tscn" type="PackedScene" id=2]
 [ext_resource path="res://prefabs/Daughter.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/9patchTets.tscn" type="PackedScene" id=4]
@@ -34,7 +9,6 @@ animations = [ {
 [ext_resource path="res://audio/House (Beta).ogg" type="AudioStream" id=7]
 [ext_resource path="res://AudioStreamPlayer.gd" type="Script" id=8]
 [ext_resource path="res://scripts/Blackscreen.gd" type="Script" id=9]
->>>>>>> 85bb77ae016969900cd665652d136bf51c0e01de
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -49,17 +23,9 @@ position = Vector2( 640, 480 )
 scale = Vector2( 10, 10 )
 texture = ExtResource( 1 )
 _sections_unfolded = [ "Offset", "Transform" ]
-<<<<<<< HEAD
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="housebackground" index="0"]
-
-frames = SubResource( 2 )
-animation = "healthy"
-=======
 __meta__ = {
 "_edit_lock_": true
 }
->>>>>>> 85bb77ae016969900cd665652d136bf51c0e01de
 
 [node name="Wall" type="StaticBody2D" parent="." index="1"]
 
@@ -107,13 +73,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Daughter" parent="." index="4" instance=ExtResource( 3 )]
 
-<<<<<<< HEAD
-[node name="Daughter" parent="." index="5" instance=ExtResource( 6 )]
-
-position = Vector2( 235.457, 654.86 )
-=======
 position = Vector2( 217.405, 654.86 )
->>>>>>> 85bb77ae016969900cd665652d136bf51c0e01de
 scale = Vector2( 10, 10 )
 _sections_unfolded = [ "Transform" ]
 
@@ -124,8 +84,6 @@ _sections_unfolded = [ "Transform" ]
 position = Vector2( 691.061, 670.06 )
 
 [node name="Fadeout" parent="." index="7" instance=ExtResource( 6 )]
-
-visible = false
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="8"]
 
@@ -168,27 +126,21 @@ autostart = false
 
 [connection signal="choseDoor" from="Door" to="Dad" method="_on_Door_choseDoor"]
 
-[connection signal="talked" from="Daughter" to="Fadeout" method="_on_Daughter_talked"]
-
-<<<<<<< HEAD
-[connection signal="talked" from="Daughter" to="Fadeout" method="_on_Daughter_talked"]
-=======
 [connection signal="talked" from="Daughter" to="text_box" method="_on_Daughter_talked"]
+
+[connection signal="talked" from="Daughter" to="Fadeout" method="_on_Daughter_talked"]
 
 [connection signal="talked" from="Daughter" to="Daughter" method="_on_Daughter_talked"]
 
 [connection signal="talked" from="Daughter" to="Dad" method="_on_Daughter_talked"]
 
 [connection signal="sceneVars" from="text_box" to="Daughter" method="_on_text_box_sceneVars"]
->>>>>>> 85bb77ae016969900cd665652d136bf51c0e01de
-
-[connection signal="talked" from="Daughter" to="text_box" method="_on_Daughter_talked"]
 
 [connection signal="nextDay" from="Fadeout" to="text_box" method="_on_Fadeout_nextDay"]
 
-[connection signal="nextDay" from="Fadeout" to="Daughter" method="_on_Fadeout_nextDay"]
-
 [connection signal="nextDay" from="Fadeout" to="Door" method="_on_Fadeout_nextDay"]
+
+[connection signal="nextDay" from="Fadeout" to="Daughter" method="_on_Fadeout_nextDay"]
 
 [connection signal="nextDay" from="Fadeout" to="Dad" method="_on_Fadeout_nextDay"]
 
