@@ -2,6 +2,7 @@ extends ColorRect
 
 signal playing;
 signal veryFirstDay;
+var home = preload("res://Home.tscn")
 
 func _ready():
 	$fadeTimer.set_wait_time(1)
@@ -17,7 +18,7 @@ func _on_Button_pressed():
 
 func _on_fadeTimer_timeout():
 	emit_signal("veryFirstDay")
-	get_tree().change_scene("home.tscn")
+	get_tree().change_scene_to(home)
 	$fadeTimer.set_wait_time(1)
 	$fadeTimer.stop()
 
