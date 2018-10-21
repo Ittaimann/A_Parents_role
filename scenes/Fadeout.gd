@@ -42,3 +42,15 @@ func _on_DaughterTimer_timeout():
 	$"day Text".text = "day " + str(global.days) 
 	$doorTimer.wait_time = $AnimationPlayer.get_current_animation_length()/3
 	$doorTimer.start()
+
+
+func _on_text_box_gameOver():
+	$AnimationPlayer.play("Fade")
+	$GameOver.start()
+	
+
+func _on_GameOver_timeout():
+	if(global.daughterTime < 12):
+		get_tree().change_scene("res://scenes/goodEnding.tscn")
+	else:
+		get_tree().change_scene("res://scenes/badEnd.tscn")
