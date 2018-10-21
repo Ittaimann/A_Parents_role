@@ -11,7 +11,7 @@
 [ext_resource path="res://audio/House (Beta).ogg" type="AudioStream" id=9]
 [ext_resource path="res://AudioStreamPlayer.gd" type="Script" id=10]
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
 "frames": [ ExtResource( 1 ) ],
@@ -25,7 +25,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 3.00517, 50.6423 )
@@ -42,7 +42,7 @@ _sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="housebackground" index="0"]
 
-frames = SubResource( 2 )
+frames = SubResource( 1 )
 animation = "healthy"
 
 [node name="Wall" type="StaticBody2D" parent="." index="1"]
@@ -61,7 +61,7 @@ bounce = 0.0
 
 position = Vector2( 1246.19, 422.45 )
 scale = Vector2( 10, 10 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Wall2" type="StaticBody2D" parent="." index="2"]
@@ -80,7 +80,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2" index="0"]
 
 position = Vector2( -10.3997, 42.3088 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="Door" parent="." index="3" instance=ExtResource( 4 )]
 
@@ -112,24 +112,24 @@ mix_target = 0
 bus = "Master"
 script = ExtResource( 10 )
 
-[connection signal="choseDoor" from="Door" to="Door" method="_on_Door_choseDoor"]
-
 [connection signal="choseDoor" from="Door" to="Fadeout" method="_on_Door_choseDoor"]
+
+[connection signal="choseDoor" from="Door" to="Door" method="_on_Door_choseDoor"]
 
 [connection signal="sceneVars" from="text_box" to="housebackground" method="_on_text_box_sceneVars"]
 
-[connection signal="sceneVars" from="text_box" to="Daughter" method="_on_text_box_sceneVars"]
-
 [connection signal="sceneVars" from="text_box" to="AudioStreamPlayer" method="_on_text_box_sceneVars"]
+
+[connection signal="sceneVars" from="text_box" to="Daughter" method="_on_text_box_sceneVars"]
 
 [connection signal="talked" from="Daughter" to="text_box" method="_on_Daughter_talked"]
 
 [connection signal="talked" from="Daughter" to="Fadeout" method="_on_Daughter_talked"]
 
+[connection signal="nextDay" from="Fadeout" to="text_box" method="_on_Fadeout_nextDay"]
+
 [connection signal="nextDay" from="Fadeout" to="Door" method="_on_Fadeout_nextDay"]
 
 [connection signal="nextDay" from="Fadeout" to="Dad" method="_on_Fadeout_nextDay"]
-
-[connection signal="nextDay" from="Fadeout" to="text_box" method="_on_Fadeout_nextDay"]
 
 
