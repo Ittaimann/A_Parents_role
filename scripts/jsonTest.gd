@@ -3,7 +3,6 @@ extends Node
 var dict = {} 
 var days = global.days
 signal sceneVars
-signal gameOver
 onready var my_node = get_node("NinePatchRect/text")
 # class member variables go here, for example:
 # var a = 2
@@ -34,9 +33,6 @@ func _on_Daughter_talked():
 
 func _on_Fadeout_nextDay():
 	days+=1
-	if(days == 20):
-		emit_signal("gameOver")
-		return
 	my_node.set_text(dict[str(days)][0])
 	#print(dict[str(days)][2])
 	emit_signal("sceneVars",dict[str(days)][2])

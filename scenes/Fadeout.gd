@@ -15,6 +15,9 @@ func _process(delta):
 
 
 func _on_Door_choseDoor():
+	if(global.days == 20):
+		Gameover()
+		return
 	$AnimationPlayer.play("Fade")
 	$"day Text".text = "day " + str(global.days) 
 	$doorTimer.wait_time = $AnimationPlayer.get_current_animation_length()/3
@@ -32,6 +35,9 @@ func _on_fadeTimer_timeout():
 	$doorTimer.stop()
 
 func _on_Daughter_talked():
+	if(global.days == 20):
+		Gameover()
+		return
 	$DaughterTimer.wait_time = 1.5
 	$DaughterTimer.start()
 
@@ -44,8 +50,8 @@ func _on_DaughterTimer_timeout():
 	$doorTimer.start()
 
 
-func _on_text_box_gameOver():
-	$AnimationPlayer.play("Fade")
+func Gameover():
+	$AnimationPlayer.play("endFade")
 	$GameOver.start()
 	
 

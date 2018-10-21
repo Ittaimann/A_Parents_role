@@ -12,5 +12,4 @@ func _process(delta):
 		#	print("bad end")
 		else:
 			get_tree().change_scene("res://scenes/badEnd.tscn")
-		#	print ("good end")
- 
+		#	print ("good end")"""
