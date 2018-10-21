@@ -1,29 +1,16 @@
 [gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Sprites/housebackground.png" type="Texture" id=1]
-[ext_resource path="res://BackgroundChange.gd" type="Script" id=2]
-[ext_resource path="res://Sprites/inbedsickbackground.png" type="Texture" id=3]
-[ext_resource path="res://prefabs/Door.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/9patchTets.tscn" type="PackedScene" id=5]
-[ext_resource path="res://prefabs/Daughter.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scenes/dad.tscn" type="PackedScene" id=7]
+[ext_resource path="res://prefabs/Door.tscn" type="PackedScene" id=2]
+[ext_resource path="res://prefabs/Daughter.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/9patchTets.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/dad.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Money.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/emotionMeter.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/Fadeout.tscn" type="PackedScene" id=8]
 [ext_resource path="res://audio/House (Beta).ogg" type="AudioStream" id=9]
 [ext_resource path="res://AudioStreamPlayer.gd" type="Script" id=10]
-
-[sub_resource type="SpriteFrames" id=2]
-
-animations = [ {
-"frames": [ ExtResource( 1 ) ],
-"loop": true,
-"name": "healthy",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ) ],
-"loop": true,
-"name": "sick",
-"speed": 5.0
-} ]
+[ext_resource path="res://scripts/Blackscreen.gd" type="Script" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -100,9 +87,22 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( 691.061, 670.06 )
 
-[node name="Fadeout" parent="." index="7" instance=ExtResource( 8 )]
+[node name="Money" parent="." index="7" instance=ExtResource( 6 )]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="8"]
+margin_left = 807.0
+margin_top = 838.0
+margin_right = 1249.0
+margin_bottom = 948.0
+text = "$5000"
+align = 2
+
+[node name="emotionMeter" parent="." index="8" instance=ExtResource( 7 )]
+
+position = Vector2( 76.0548, 884.154 )
+
+[node name="Fadeout" parent="." index="9" instance=ExtResource( 8 )]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="10"]
 
 stream = ExtResource( 9 )
 volume_db = 0.0
@@ -111,6 +111,26 @@ autoplay = true
 mix_target = 0
 bus = "Master"
 script = ExtResource( 10 )
+
+[node name="Blackscreen" type="ColorRect" parent="." index="11"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1280.0
+margin_bottom = 960.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0, 0, 0, 1 )
+script = ExtResource( 11 )
+_sections_unfolded = [ "Rect" ]
+
+[node name="shortTimer" type="Timer" parent="Blackscreen" index="0"]
 
 [connection signal="choseDoor" from="Door" to="Door" method="_on_Door_choseDoor"]
 
@@ -122,14 +142,28 @@ script = ExtResource( 10 )
 
 [connection signal="sceneVars" from="text_box" to="AudioStreamPlayer" method="_on_text_box_sceneVars"]
 
-[connection signal="talked" from="Daughter" to="text_box" method="_on_Daughter_talked"]
+[connection signal="choseDoor" from="Door" to="Daughter" method="_on_Door_choseDoor"]
+
+[connection signal="choseDoor" from="Door" to="Dad" method="_on_Door_choseDoor"]
 
 [connection signal="talked" from="Daughter" to="Fadeout" method="_on_Daughter_talked"]
+
+[connection signal="talked" from="Daughter" to="text_box" method="_on_Daughter_talked"]
+
+[connection signal="talked" from="Daughter" to="Daughter" method="_on_Daughter_talked"]
+
+[connection signal="talked" from="Daughter" to="Dad" method="_on_Daughter_talked"]
+
+[connection signal="sceneVars" from="text_box" to="Daughter" method="_on_text_box_sceneVars"]
+
+[connection signal="nextDay" from="Fadeout" to="text_box" method="_on_Fadeout_nextDay"]
 
 [connection signal="nextDay" from="Fadeout" to="Door" method="_on_Fadeout_nextDay"]
 
 [connection signal="nextDay" from="Fadeout" to="Dad" method="_on_Fadeout_nextDay"]
 
 [connection signal="nextDay" from="Fadeout" to="text_box" method="_on_Fadeout_nextDay"]
+
+[connection signal="timeout" from="Blackscreen/shortTimer" to="Blackscreen" method="_on_shortTimer_timeout"]
 
 
