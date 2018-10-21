@@ -102,7 +102,6 @@ script = ExtResource( 9 )
 
 [node name="Blackscreen" type="ColorRect" parent="." index="10"]
 
-visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -128,27 +127,27 @@ autostart = false
 
 [connection signal="choseDoor" from="Door" to="Fadeout" method="_on_Door_choseDoor"]
 
-[connection signal="choseDoor" from="Door" to="Door" method="_on_Door_choseDoor"]
-
 [connection signal="choseDoor" from="Door" to="Dad" method="_on_Door_choseDoor"]
 
-[connection signal="talked" from="Daughter" to="Fadeout" method="_on_Daughter_talked"]
+[connection signal="choseDoor" from="Door" to="Door" method="_on_Door_choseDoor"]
 
 [connection signal="talked" from="Daughter" to="text_box" method="_on_Daughter_talked"]
 
-[connection signal="talked" from="Daughter" to="Daughter" method="_on_Daughter_talked"]
+[connection signal="talked" from="Daughter" to="Fadeout" method="_on_Daughter_talked"]
 
 [connection signal="talked" from="Daughter" to="Dad" method="_on_Daughter_talked"]
+
+[connection signal="talked" from="Daughter" to="Daughter" method="_on_Daughter_talked"]
 
 [connection signal="sceneVars" from="text_box" to="Daughter" method="_on_text_box_sceneVars"]
 
 [connection signal="nextDay" from="Fadeout" to="text_box" method="_on_Fadeout_nextDay"]
 
+[connection signal="nextDay" from="Fadeout" to="Dad" method="_on_Fadeout_nextDay"]
+
 [connection signal="nextDay" from="Fadeout" to="Door" method="_on_Fadeout_nextDay"]
 
 [connection signal="nextDay" from="Fadeout" to="Daughter" method="_on_Fadeout_nextDay"]
-
-[connection signal="nextDay" from="Fadeout" to="Dad" method="_on_Fadeout_nextDay"]
 
 [connection signal="timeout" from="Blackscreen/shortTimer" to="Blackscreen" method="_on_shortTimer_timeout"]
 

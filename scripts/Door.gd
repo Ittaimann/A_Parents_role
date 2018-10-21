@@ -17,10 +17,6 @@ func _physics_process(delta):
 			if not paused and Input.is_action_just_pressed("ui_down"):
 				print("down pressed")
 				emit_signal("choseDoor")
-				var player = AudioStreamPlayer.new()
-				self.add_child(player)
-				player.stream = load("res://audio/Transition 2 (Beta).ogg")
-				player.play()
 
 
 
