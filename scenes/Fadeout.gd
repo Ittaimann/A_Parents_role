@@ -12,7 +12,7 @@ func _process(delta):
 
 func _on_Door_choseDoor():
 	$AnimationPlayer.play("Fade")
-	$"day Text".text = "The next day..."
+	$"day Text".text = "day " + str(global.days) 
 	$doorTimer.wait_time = $AnimationPlayer.get_current_animation_length()/3
 	$doorTimer.start()
 	
@@ -22,6 +22,8 @@ func _on_Door_choseDoor():
 
 func _on_fadeTimer_timeout():
 	emit_signal("nextDay")
+	global.days+=1
+	print(global.days)
 	$doorTimer.set_wait_time(1)
 	$doorTimer.stop()
 
@@ -33,6 +35,6 @@ func _on_Daughter_talked():
 func _on_DaughterTimer_timeout():
 	$DaughterTimer.stop()
 	$AnimationPlayer.play("Fade")
-	$"day Text".text = "The next day..."
+	$"day Text".text = "day " + str(global.days) 
 	$doorTimer.wait_time = $AnimationPlayer.get_current_animation_length()/3
 	$doorTimer.start()
