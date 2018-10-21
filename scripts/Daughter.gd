@@ -12,19 +12,18 @@ func _physics_process(delta):
 	var bodies = get_overlapping_bodies()
 	for body in bodies:
 		if body.name == "Dad":
-			print("touching")
 			if not paused and Input.is_action_just_pressed("ui_down"):
 				emit_signal("talked")
 
 
 
-func _on_text_box_sceneVars(anims):
-	
-	if(anims == "sick"):
+func _on_text_box_sceneVars(animation, audio):
+	print (animation)
+	if(animation == "sick"):
 		$AnimatedSprite.hide()
 	else:
 		$AnimatedSprite.show()
-		$AnimatedSprite.play(anims)
+		$AnimatedSprite.play(animation)
 
 
 func _on_Daughter_talked():
