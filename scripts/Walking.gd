@@ -10,11 +10,12 @@ const JUMPHEIGHT = -50
 const UP = Vector2(0,-1)
 var motion = Vector2()
 var initialPos = Vector2()
-var paused = false
+var paused = true
 
 func _ready():
 	initialPos = transform
-	$dadTimer.set_wait_time(1)
+	$dadTimer.set_wait_time(3)
+	$dadTimer.start()
 
 func _physics_process(delta):
 	motion.y += GRAVITY
@@ -40,7 +41,7 @@ func _on_Fadeout_nextDay():
 	print("LOL")
 	transform = initialPos
 	
-	$dadTimer.set_wait_time(1.5)
+	$dadTimer.set_wait_time(2.5)
 	$dadTimer.start()
 
 
@@ -53,5 +54,6 @@ func _on_Daughter_talked():
 
 
 func _on_dadTimer_timeout():
-	paused = false
 	$dadTimer.stop()
+	paused = false
+	

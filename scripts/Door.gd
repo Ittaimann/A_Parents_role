@@ -4,7 +4,7 @@ signal choseDoor
 var paused = false
 
 func _ready():
-	pass
+	$doorpauseTimer.set_wait_time(1)
 	
 
 func _physics_process(delta):
@@ -24,4 +24,10 @@ func _on_Door_choseDoor():
 
 
 func _on_Fadeout_nextDay():
+	$doorpauseTimer.set_wait_time(2.5)
+	$doorpauseTimer.start()
+
+
+func _on_doorpauseTimer_timeout():
+	$doorpauseTimer.stop()
 	paused = false
