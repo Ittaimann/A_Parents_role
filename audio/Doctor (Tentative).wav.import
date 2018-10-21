@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Doctor (Tentative).wav-f5611372a488d501186d40751e46fd4f.sample"
+
+[deps]
+
+source_file="res://audio/Doctor (Tentative).wav"
+dest_files=[ "res://.import/Doctor (Tentative).wav-f5611372a488d501186d40751e46fd4f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

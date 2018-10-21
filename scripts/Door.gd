@@ -1,21 +1,16 @@
 extends Area2D
 
-var choseDoor
+signal choseDoor
 
 func _ready():
-	choseDoor = false
+	pass
+	
 
 func _physics_process(delta):
 	var bodies = get_overlapping_bodies()
 	for body in bodies:
-		if body.name == "DadMoving":
-			print("touching dad")
+		if body.name == "Dad":
 			if Input.is_action_pressed("ui_down"):
 				print("down pressed")
-				choseDoor = true
+				emit_signal("choseDoor")
 
-func dad_chose_door():
-	return choseDoor
-	
-	
-	
