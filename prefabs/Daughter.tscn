@@ -33,6 +33,15 @@ _sections_unfolded = [ "Transform" ]
 position = Vector2( 1, 0 )
 shape = SubResource( 1 )
 
+[node name="DaughterPauseTimer" type="Timer" parent="." index="2"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
 [connection signal="talked" from="." to="." method="_on_Daughter_talked"]
+
+[connection signal="timeout" from="DaughterPauseTimer" to="." method="_on_DaughterPauseTimer_timeout"]
 
 

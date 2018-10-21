@@ -33,10 +33,10 @@ func _on_Daughter_talked():
 
 
 func _on_Fadeout_nextDay():
-	$daughterPauseTimer.set_wait_time(2.5)
-	$daughterPauseTimer.start()
+	$DaughterPauseTimer.set_wait_time(2.5)
+	$DaughterPauseTimer.start()
 
 
-func _on_daughterPauseTimer_timeout():
-	$daughterPauseTimer.stop()
+func _on_DaughterPauseTimer_timeout():
+	$DaughterPauseTimer.stop()
 	paused = false

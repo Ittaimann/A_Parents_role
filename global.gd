@@ -1,6 +1,6 @@
 extends Node
 
-var days=17
+var days=1
 var daughterTime=15
 var money = 500
 
