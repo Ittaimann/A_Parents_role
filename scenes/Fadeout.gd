@@ -2,9 +2,11 @@ extends ColorRect
 
 signal playing;
 signal nextDay;
+
 func _ready():
 	$AnimationPlayer.play("startFade")
 	$doorTimer.set_wait_time(1)
+	Dad = get_tree().get_root().get_node("Dad")
 	
 func _process(delta):
 	pass
