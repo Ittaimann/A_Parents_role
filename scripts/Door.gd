@@ -8,16 +8,15 @@ func _ready():
 	
 
 func _physics_process(delta):
+	if global.days == 7: 
+		paused = true
+		
 	var bodies = get_overlapping_bodies()
 	for body in bodies:
 		if body.name == "Dad":
 			if not paused and Input.is_action_just_pressed("ui_down"):
 				print("down pressed")
 				emit_signal("choseDoor")
-				var player = AudioStreamPlayer.new()
-				self.add_child(player)
-				player.stream = load("res://audio/Transition 2 (Beta).ogg")
-				player.play()
 
 
 
