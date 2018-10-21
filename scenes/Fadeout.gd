@@ -3,6 +3,7 @@ extends ColorRect
 signal playing;
 signal nextDay;
 func _ready():
+	$AnimationPlayer.play("startFade")
 	$doorTimer.set_wait_time(1)
 	
 func _process(delta):
@@ -21,7 +22,6 @@ func _on_Door_choseDoor():
 
 
 func _on_fadeTimer_timeout():
-	emit_signal("nextDay")
 	global.days+=1
 	print(global.days)
 	$doorTimer.set_wait_time(1)

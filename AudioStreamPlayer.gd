@@ -1,4 +1,4 @@
-extends AnimationPlayer
+extends AudioStreamPlayer
 
 # class member variables go here, for example:
 # var a = 2
@@ -9,9 +9,7 @@ func _ready():
 	# Initialization here
 	pass
 
-func _process(delta):
-	pass
-
-func _on_Door_choseDoor():
-	play("Fade")
-	
+#func _process(delta):
+#	# Called every frame. Delta is time since last frame.
+#	# Update game logic here.
+#	pass
