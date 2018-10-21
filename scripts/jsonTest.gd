@@ -26,3 +26,8 @@ func _process(delta):
 func _on_Daughter_talked():
 	my_node.set_text(dict[str(days)][1])
 
+
+
+func _on_Fadeout_nextDay():
+	print("its time") # replace with function body
+	pass
