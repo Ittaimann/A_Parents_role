@@ -2,6 +2,7 @@ extends Node
 
 var dict = {} 
 var days = global.days
+signal sceneVars
 onready var my_node = get_node("NinePatchRect/text")
 # class member variables go here, for example:
 # var a = 2
@@ -12,7 +13,7 @@ func _ready():
 	var text = JSON.parse(file.get_as_text())
 	file.close()
 	dict = (text.result)
-	
+
 	my_node.set_text(dict[str(days)][0])
 
 func _process(delta):
@@ -33,4 +34,5 @@ func _on_Daughter_talked():
 func _on_Fadeout_nextDay():
 	days+=1
 	my_node.set_text(dict[str(days)][0])
+	emit_signal("sceneVars",dict[str(days)][2])
 	pass

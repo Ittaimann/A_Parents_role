@@ -10,3 +10,7 @@ func _physics_process(delta):
 				emit_signal("talked")
 				get_tree().change_scene("FadeScene.tscn")
 				
+
+func _on_text_box_sceneVars(anims):
+	print(anims)
+	$AnimatedSprite.play(anims)
