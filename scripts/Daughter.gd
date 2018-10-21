@@ -4,7 +4,8 @@ signal talked
 var paused = false
 
 func _ready():
-	$daughterPauseTimer.set_wait_time(1)
+	pass
+	#$daughterPauseTimer.set_wait_time(1)
 	
 
 func _physics_process(delta):
