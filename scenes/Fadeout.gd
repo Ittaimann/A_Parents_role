@@ -26,7 +26,7 @@ func _on_Door_choseDoor():
 func _on_fadeTimer_timeout():
 	global.days+=1
 	emit_signal("nextDay")
-	print(global.days)
+	#print(global.days)
 	$doorTimer.set_wait_time(1)
 	$doorTimer.stop()
 

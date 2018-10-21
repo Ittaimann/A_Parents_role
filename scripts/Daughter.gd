@@ -12,9 +12,12 @@ func _physics_process(delta):
 				
 
 func _on_text_box_sceneVars(anims):
+	print(anims)
 	if(anims == "sick"):
+		print("LOL")
 		$AnimatedSprite.hide()
 	else:
+		$AnimatedSprite.show()
 		$AnimatedSprite.play(anims)
 
 

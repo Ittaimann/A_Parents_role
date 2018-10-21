@@ -34,5 +34,6 @@ func _on_Daughter_talked():
 func _on_Fadeout_nextDay():
 	days+=1
 	my_node.set_text(dict[str(days)][0])
+	#print(dict[str(days)][2])
 	emit_signal("sceneVars",dict[str(days)][2])
 	pass
