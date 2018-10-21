@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Transition 2 (Beta).ogg-3ec54409c46ad38ba8c9c72786ad
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

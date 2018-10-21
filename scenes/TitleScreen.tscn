@@ -23,7 +23,7 @@ tracks/0/keys = {
 "values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ) ]
 }
 
-[node name="TitleScreen" type="Node" index="0"]
+[node name="TitleScreen" type="Node"]
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
