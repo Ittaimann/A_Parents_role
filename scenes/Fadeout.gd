@@ -56,7 +56,7 @@ func Gameover():
 	
 
 func _on_GameOver_timeout():
-	if(global.daughterTime < 12):
+	if(global.daughterTime >= 15 and global.money >= 5000):
 		get_tree().change_scene("res://scenes/goodEnding.tscn")
 	else:
 		get_tree().change_scene("res://scenes/badEnd.tscn")
